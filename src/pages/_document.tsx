@@ -1,4 +1,10 @@
-import Document, { DocumentContext } from 'next/document';
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
 
@@ -27,5 +33,23 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;500&display=swap"
+            rel="stylesheet"
+          ></link>
+          <title>Lading Page</title>
+        </Head>
+        <body>
+          <Main />
+        </body>
+        <NextScript />
+      </Html>
+    );
   }
 }

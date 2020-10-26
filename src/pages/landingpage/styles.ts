@@ -18,12 +18,15 @@ export const Section = styled.section<PropsSection>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(${(props) => props.img});
-  background-repeat: no-repeat;
-  background-size: 86rem 46rem;
-  background-position: bottom right 25%;
 
   height: 66rem;
+
+  main {
+    background-image: url(${(props) => props.img});
+    background-repeat: no-repeat;
+    background-size: 68rem;
+    background-position: bottom right;
+  }
 `;
 
 export const Container = styled.div`

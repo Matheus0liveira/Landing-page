@@ -18,15 +18,17 @@ export default function Home() {
       <Header />
       <Section img="/background.svg">
         <Container>
-          <ContentWrapper style="description">
-            <Text typeText="title">Save your data storage here.</Text>
-            <Text typeText="description">
-              Data Warehouse is a data storage area that has been tested for
-              security, so you can store your data here safely but not be afraid
-              of being stolen by others.
-            </Text>
-            <Button>Learn more</Button>
-          </ContentWrapper>
+          <main>
+            <ContentWrapper style="description">
+              <Text typeText="title">Save your data storage here.</Text>
+              <Text typeText="description">
+                Data Warehouse is a data storage area that has been tested for
+                security, so you can store your data here safely but not be
+                afraid of being stolen by others.
+              </Text>
+              <Button>Learn more</Button>
+            </ContentWrapper>
+          </main>
         </Container>
       </Section>
       <main>

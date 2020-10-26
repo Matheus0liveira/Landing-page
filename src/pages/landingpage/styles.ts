@@ -3,6 +3,9 @@ import styled, { css } from 'styled-components';
 interface PropsSection {
   img: string;
 }
+interface PropsContentWrapper {
+  style: 'description' | 'card';
+}
 interface PropsText {
   typeText: 'title' | 'description';
 }
@@ -26,14 +29,57 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const ContentWrapper = styled.main`
-  width: 45%;
+export const ContentWrapper = styled.div<PropsContentWrapper>`
+  ${(props) =>
+    props.style === 'description' &&
+    css`
+      width: 45%;
 
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 5rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 5rem;
+    `}
+
+  ${(props) =>
+    props.style === 'card' &&
+    css`
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(240, 99, 184, 0.15);
+      margin: 0 auto;
+
+      width: 100%;
+      border: 0;
+      border-radius: 5rem;
+      padding-right: 8rem;
+
+      margin-top: 10rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 3.8rem;
+
+        h1 {
+          color: #212353;
+          font-size: 4rem;
+          font-weight: 400;
+        }
+        p {
+          color: #4b5d68;
+          width: 88%;
+        }
+      }
+
+      img {
+        width: 50%;
+        height: 50.04rem;
+      }
+    `}
 `;
 
 export const Text = styled.h1<PropsText>`
@@ -75,3 +121,5 @@ export const Button = styled.button`
     transform: scale(1.02);
   }
 `;
+
+export const Main = styled.main``;

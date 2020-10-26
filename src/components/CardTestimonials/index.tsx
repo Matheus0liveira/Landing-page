@@ -8,12 +8,11 @@ const CardTestimonials = () => {
         alt=""
       />
       <div>
-        <h1>Jon Fang</h1>
-        <a href="">www.fang.com</a>
+        <h1>Matheus Oliveira</h1>
+        <a href="">https://github.com/Matheus0liveira</a>
         <p>
-          Suspendisse ultrices at diam lectus nullam. Nisl, sagittis viverra
-          enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
-          laoreet nulla.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum totam
+          vitae.
         </p>
       </div>
     </Card>

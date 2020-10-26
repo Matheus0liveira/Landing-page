@@ -10,9 +10,7 @@ export const Card = styled.div`
 
   border-radius: 2rem;
 
-  /* margin: 0 auto; */
-
-  border: 0.1rem solid #9c69e2;
+  border: 0.4rem solid #9c69e2;
   box-shadow: 0px 20px 0px rgba(000, 000, 000, 0.1);
   img {
     width: 9rem;

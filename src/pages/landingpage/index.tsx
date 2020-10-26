@@ -1,3 +1,4 @@
+import { BsFillHeartFill } from 'react-icons/bs';
 import Card from '../../components/Card';
 import CardTestimonials from '../../components/CardTestimonials';
 import Header from '../../components/Header';
@@ -10,6 +11,7 @@ import {
   Button,
   Cards,
   CardsTestimonials,
+  Footer,
 } from './styles';
 
 export default function Home() {
@@ -76,7 +78,27 @@ export default function Home() {
         <CardsTestimonials position="left">
           <CardTestimonials />
         </CardsTestimonials>
+        <CardsTestimonials position="right">
+          <CardTestimonials />
+        </CardsTestimonials>
+        <CardsTestimonials position="left">
+          <CardTestimonials />
+        </CardsTestimonials>
       </ContentWrapper>
+
+      <Footer>
+        <p>
+          Created by:{' '}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/Matheus0liveira"
+          >
+            Matheus Oliveira Santos{' '}
+            <BsFillHeartFill color="#9c69e2" size={24} />
+          </a>
+        </p>
+      </Footer>
     </>
   );
 }

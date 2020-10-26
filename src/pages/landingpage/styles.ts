@@ -207,6 +207,72 @@ export const CardsTestimonials = styled.div<PropsCardsTestimonials>`
     `}
 
   gap: 10rem;
-  /* position: absolute; */
-  /* margin-right: 20rem; */
+`;
+
+export const Footer = styled.footer`
+  margin-top: 10rem;
+
+  border-top: 0.1rem solid #9c69ee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 4rem;
+
+  font-size: 1.8rem;
+  p,
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    gap: 0.5rem;
+  }
+  a {
+    gap: 1rem;
+    color: #9c69e2;
+    font-weight: bold;
+  }
+
+  svg {
+    animation: heartbeat 1.5s ease-in-out infinite both;
+    font-size: 2rem;
+  }
+
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
 `;

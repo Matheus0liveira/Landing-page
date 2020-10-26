@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   body,
   html{
     background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
   }
   a{

@@ -39,6 +39,7 @@ const Header = () => (
           </ul>
         </NavBar>
         <div></div>
+        <div></div>
         <div>
           <Button>
             Request Demo <BsArrowRight size={23} color="#9C69E2" />

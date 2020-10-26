@@ -19,6 +19,8 @@ const GlobalStyle = createGlobalStyle`
   html{
     background: linear-gradient(180deg, #F6FAFD 0%, #FFFFFF 19.4%);
     width: 100%;
+
+    overflow-x: hidden;
   }
   a{
     text-decoration: none;

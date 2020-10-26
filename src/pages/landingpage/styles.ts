@@ -4,10 +4,14 @@ interface PropsSection {
   img: string;
 }
 interface PropsContentWrapper {
-  style: 'description' | 'card' | 'cards';
+  style: 'description' | 'card' | 'cards' | 'testimonials';
 }
 interface PropsText {
   typeText: 'title' | 'description';
+}
+
+interface PropsCardsTestimonials {
+  position: string;
 }
 
 export const Section = styled.section<PropsSection>`
@@ -40,6 +44,7 @@ export const ContentWrapper = styled.div<PropsContentWrapper>`
       justify-content: flex-start;
       flex-direction: column;
       gap: 5rem;
+      overflow: hidden;
     `}
 
   ${(props) =>
@@ -105,6 +110,27 @@ export const ContentWrapper = styled.div<PropsContentWrapper>`
         margin: 5rem auto 0 auto;
       }
     `}
+    ${(props) =>
+    props.style === 'testimonials' &&
+    css`
+      width: 68%;
+      max-width: 1248px;
+      margin: 0 auto;
+      background: #9c69e2;
+      /* height: 709px; */
+
+      margin-top: 15rem;
+      border-radius: 5rem;
+
+      padding: 9rem;
+
+      h1 {
+        color: #ffff;
+        font-weight: bold;
+        font-size: 40px;
+        margin-bottom: 8.8rem;
+      }
+    `}
 `;
 
 export const Text = styled.h1<PropsText>`
@@ -159,4 +185,25 @@ export const Cards = styled.div`
 
   gap: 10%;
   margin-top: 7rem;
+`;
+
+export const CardsTestimonials = styled.div<PropsCardsTestimonials>`
+  display: flex;
+
+  margin: 5rem 0;
+
+  ${(props) =>
+    props.position === 'left' &&
+    css`
+      justify-content: flex-start;
+    `}
+  ${(props) =>
+    props.position === 'right' &&
+    css`
+      justify-content: flex-end;
+    `}
+
+  gap: 10rem;
+  /* position: absolute; */
+  /* margin-right: 20rem; */
 `;

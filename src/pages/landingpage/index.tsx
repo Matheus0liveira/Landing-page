@@ -1,4 +1,5 @@
 import Card from '../../components/Card';
+import CardTestimonials from '../../components/CardTestimonials';
 import Header from '../../components/Header';
 
 import {
@@ -8,6 +9,7 @@ import {
   Text,
   Button,
   Cards,
+  CardsTestimonials,
 } from './styles';
 
 export default function Home() {
@@ -59,6 +61,19 @@ export default function Home() {
             <Card color=" #f0faf8" img="/card-4.png" />
           </Cards>
         </Container>
+      </ContentWrapper>
+
+      <ContentWrapper style="testimonials">
+        <h1>Testimonials</h1>
+        <CardsTestimonials position="left">
+          <CardTestimonials />
+        </CardsTestimonials>
+        <CardsTestimonials position="right">
+          <CardTestimonials />
+        </CardsTestimonials>
+        <CardsTestimonials position="left">
+          <CardTestimonials />
+        </CardsTestimonials>
       </ContentWrapper>
     </>
   );

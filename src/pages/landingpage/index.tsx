@@ -1,3 +1,4 @@
+import Card from '../../components/Card';
 import Header from '../../components/Header';
 
 import {
@@ -6,7 +7,7 @@ import {
   ContentWrapper,
   Text,
   Button,
-  Main,
+  Cards,
 } from './styles';
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
           </ContentWrapper>
         </Container>
       </Section>
-      <Main>
+      <main>
         <Container>
           <ContentWrapper style="card">
             <img src="/image-card.svg" alt="" />
@@ -42,7 +43,23 @@ export default function Home() {
             </div>
           </ContentWrapper>
         </Container>
-      </Main>
+      </main>
+      <ContentWrapper style="cards">
+        <Container>
+          <h1>Features</h1>
+          <p>
+            Some of the features and advantages that we provide for those of you
+            who store data in this Data Warehouse.
+          </p>
+
+          <Cards>
+            <Card color=" #f0faf8" img="/card-1.png" />
+            <Card color="#F5F0FC" img="/card-2.png" />
+            <Card color="#F5F0FC" img="/card-3.png" />
+            <Card color=" #f0faf8" img="/card-4.png" />
+          </Cards>
+        </Container>
+      </ContentWrapper>
     </>
   );
 }

@@ -4,7 +4,7 @@ interface PropsSection {
   img: string;
 }
 interface PropsContentWrapper {
-  style: 'description' | 'card';
+  style: 'description' | 'card' | 'cards';
 }
 interface PropsText {
   typeText: 'title' | 'description';
@@ -80,6 +80,31 @@ export const ContentWrapper = styled.div<PropsContentWrapper>`
         height: 50.04rem;
       }
     `}
+
+    ${(props) =>
+    props.style === 'cards' &&
+    css`
+      text-align: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+
+      margin-top: 15rem;
+
+      h1 {
+        font-size: 4rem;
+        color: #212353;
+      }
+
+      p {
+        font-size: 1.8rem;
+        width: 50%;
+        margin: 5rem auto 0 auto;
+      }
+    `}
 `;
 
 export const Text = styled.h1<PropsText>`
@@ -122,4 +147,16 @@ export const Button = styled.button`
   }
 `;
 
-export const Main = styled.main``;
+export const Cards = styled.div`
+  width: 100%;
+  max-width: 1248px;
+  /* padding: 0 2%; */
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  gap: 10%;
+  margin-top: 7rem;
+`;

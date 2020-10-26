@@ -212,7 +212,7 @@ export const CardsTestimonials = styled.div<PropsCardsTestimonials>`
 export const Footer = styled.footer`
   margin-top: 10rem;
 
-  border-top: 0.1rem solid #9c69ee;
+  border-top: 0.1rem solid #ebe1f9;
 
   display: flex;
   align-items: center;
